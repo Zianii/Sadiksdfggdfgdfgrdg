@@ -973,8 +973,8 @@ client.on("message", message => {
 
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "xmast8dem")) {
-    await message.channel.send("** ❓  حسنا, لماذا تريد التقديم على رتبة هلبر**").then(e => {
+  if(message.content.startsWith(prefix + "staff Event")) {
+    await message.channel.send("** ❓  تقدر تفتح مايك ويكون مايكك جيد**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -984,13 +984,13 @@ client.on('message', async message => {
       lan = collected.first().content
       collected.first().delete()
 e.delete();
-     message.channel.send('** رائع, بماذا ستساعدنا ❓**').then(m => {
+     message.channel.send('** تقدر تسوي قيف اوايات على حسابات واشياء ثانيه ❓**').then(m => {
 let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(co => {
   md = co.first().content
         co.first().delete()
         m.delete();
-message.channel.send('**اخيرا وليس اخرا, هل ستحترم الاعضاء الاقل و الاعلى منك رتبة ❓ **').then(ms => {
+message.channel.send('**اخيرا وليس اخرا, تقدر تحط شعار السيرفر فاسمك وليس النك نيم ❓ **').then(ms => {
 let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(col => {
   br = col.first().content
@@ -1002,12 +1002,12 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = message.guild.channels.find('name', 'تقديمات')
+var gg = message.guild.channels.find('name', 'apply')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  سبب التقديم :question:  : \n ${lan}\nبماذا سيساعد :link: :\n ${md} \nاحترام الاعضاء :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
-          .setFooter(`3mri's Server`)
+.setDescription(`**  المايك :question:  : \n ${lan}\nقيف اوايات :link: :\n ${md} \nالاسم :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+          .setFooter(`Leaders Community©`)
 .setTimestamp()
 });
 }        
