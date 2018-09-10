@@ -1822,7 +1822,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-          const adminprefix = "%";
+const adminprefix = "%";
 const devs = ['283580465862934539', '452379478618800129'];     
       client.on('message', message => {
         var argresult = message.content.split(` `).slice(1).join(' ');
