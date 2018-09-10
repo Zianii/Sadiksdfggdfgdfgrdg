@@ -258,7 +258,7 @@ let embed = new Discord.RichEmbed()
 .addField(' الاعضاء👥 ',` [${client.users.size}] `)
 .addField('الرومات📚 ',`[${client.channels.size}]`) 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField(' BOT BY : ',`Leaders Community© Support`) 
+.addField(' BOT BY : ',`Alpha Server Support`) 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -310,18 +310,6 @@ msg.delete();
 }
 });
 
-
-
-
-
-client.on('message', message => {
-var args = message.content.split(/[ ]+/)
-if(message.content.includes('https://')){
-if(!message.member.hasPermission('ADMINISTRATOR'))
-message.delete()
-return message.reply(`** يمنع نشر الروابط بهذا السيرفر  :angry: ! **`)
-}
-});
 
 
 
@@ -498,7 +486,7 @@ client.on('message',async message => {
 
 client.on('message', message =>{
   let args = message.content.split(' ');
-  let prefix = 'L';
+  let prefix = '%';
 if(args[0] === `${prefix}emoji`){
 let findEmoji = args[1];
 
@@ -1022,7 +1010,7 @@ client.on('message', message => {
 	
 	client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='Lcount')
+      if(message.content =='%count')
       var SaifDz = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
       .setFooter(message.author.username, message.author.avatarURL)
@@ -1220,22 +1208,6 @@ if(cmd === `${prefix}sug`) {
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تنشر",
-        color: 0x06DF00,
-        description: "يمنع النشر في هذا السيرفر",
-        footer: {
-          text: "By XMAS"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
 
 client.on('message', emoko => {
   if (emoko.content === "%date") {
@@ -1420,24 +1392,24 @@ client.on('message', message => {
    message.author.sendMessage(`
    **
   [❖═════اومر ادمن═══════❖]
-  ❖ .kick <mention > ➾  kickلي اعطاء شخص
-  ❖ .setvoice  لي انشاء روم فويس اونلاين
+  ❖ %kick <mention > ➾  kickلي اعطاء شخص
+  ❖ %setvoice  لي انشاء روم فويس اونلاين
   
-  ❖ .say  ➾ يكرر الكلام الذي تقولة
+  ❖ %say  ➾ يكرر الكلام الذي تقولة
   
-  ❖ .ban <mention> ➾ لي اعطاء شخص بان
+  ❖ %ban <mention> ➾ لي اعطاء شخص بان
   
-  ❖ .unban <mention> ➾ لي فك بان عن شخص
+  ❖ %unban <mention> ➾ لي فك بان عن شخص
   
-  ❖ .clear ➾ لي مسح الشات
+  ❖ %clear ➾ لي مسح الشات
   
-  ❖ .mute <mention> ➾ لي اعطاء ميوت لي شخص
+  ❖ %mute <mention> ➾ لي اعطاء ميوت لي شخص
   
-  ❖ .ct <name> ➾ لي انشاء روم كتبي
+  ❖ %ct <name> ➾ لي انشاء روم كتبي
  
-  ❖ .cv <name> ➾لي انشاء روم صوتي
+  ❖ %cv <name> ➾لي انشاء روم صوتي
   
-  ❖ .bc <message>  ➾ لي ارسال رسالة لي كل الاعضاء
+  ❖ %bc <message>  ➾ لي ارسال رسالة لي كل الاعضاء
   **
   `);
   
@@ -1545,36 +1517,31 @@ client.on('message', msg => {
 
 
  message.author.sendMessage(`
-Bot BY ! ¿‹« • ★UNKNOWN • مجهول • »›?#5272531
-             3mri's Server       BOT
+Bot By XMas
+             Alpha Bot
 ╔[❖════════════❖]╗
-             Prefix = ' . '
+             Prefix =  % 
 ╚[❖════════════❖]╝
 ╔[❖════════════❖]╗
              Admin Commands
 ╚[❖════════════❖]╝
- ❖ .clear ➾ clear chat (Dont Use Up OF 100
- 
- ❖ .mutevoice < mention > ➾ mutevoice member
- ❖ .unmutevoice <mention> ➾ unmutevoice member
- ❖ .tv ➾ create channel With Your Type
-  
- ❖ .bc <message> ➾ message all members in server
+ ❖ %clear ➾ clear chat (Dont Use Up OF 100)
+ ❖ %mutevoice < mention > ➾ mutevoice member
+ ❖ %unmutevoice <mention> ➾ unmutevoice member
+ ❖ %tv ➾ create channel With Your Type
+ ❖ %bc <message> ➾ message all members in server
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝ 
-❖ .date ➾ see date (متقدم ساعتين)
-❖ .inv ➾ server invite
-❖ .ping ➾ to see ping 
-❖ .bot ➾ bot informations 
-❖ .invite ➾ bot invite link
-❖ .اذكار ➾ azkar
+❖ %date ➾ see date (متقدم ساعتين)
+❖ %inv ➾ server invite
+❖ %ping ➾ to see ping 
+❖ %bot ➾ bot informations 
+❖ %invite ➾ bot invite link
+❖ %اذكار ➾ azkar
 ╔[❖════════════❖]╗
                     Welcome
 ╚[❖════════════❖]╝
-==================================================================
-! ¿‹« • ★UNKNOWN • مجهول • »›?#5272531
-==================================================================
 `);
 
     }
@@ -1715,6 +1682,167 @@ client.on('message',message =>{
 
 
 
+
+client.on('message', msg => {
+  if(msg.content === 'هلا')
+              setTimeout(function() {  
+msg.reply('اهلين منور حبي ')
+              }, 10000)
+});
+
+
+
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'wlc');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField('🎽 | name :  ',`${member}`)
+        .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
+        .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+               
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                       
+     .setFooter(`${member.guild.name}`)
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
+    
+    client.on('guildMemberRemove', member => {
+        var embed = new Discord.RichEmbed()
+        .setAuthor(member.user.username, member.user.avatarURL)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
+        .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
+        .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+        .setColor('RED')
+        .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+    
+    var channel =member.guild.channels.find('name', 'wlc')
+    if (!channel) return;
+    channel.send({embed : embed});
+    })
+
+
+
+
+    client.on('message', message => {
+        if(message.content.includes('discord.gg')){
+                                                if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
+            if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            message.delete()
+        return message.reply(`** No Invite Links :angry: !**`)
+        }
+    }
+    });
+
+    client.on('message', message => {
+        if(message.content.includes('https://')){
+                                                if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
+            if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            message.delete()
+        return message.reply(`** No Links :angry: !**`)
+        }
+    }
+    });
+
+
+    const bannedwords = [
+        "#credit",
+        "#profile",
+        "#rep",
+        "#top",
+        "%level",
+        "%تقديم",
+        "-play",
+        "-stop",
+        "-p",
+        "-s",
+        "!invites",
+        "!top",
+        "G.play",
+        "G.stop",
+        "G.skip",
+        "-skip",
+        "!p",
+        "!play",
+        "!skip",
+        "!s",
+        "%play",
+        "%skip",
+        "%stop"
+      
+      ]
+      client.on('message', message => {
+        var Muted = message.guild.roles.find("name", "muted");
+        var warn = message.guild.roles.find("name", "warn");
+        if(bannedwords.some(word => message.content.includes(word))) {
+        if(message.channel.id !== '481475376212606987') return;
+        if (message.author.bot) return;
+        if(message.member.roles.has(warn)) return;
+        if(!message.member.roles.has(warn.id)) {
+        message.member.addRole(warn)
+        message.reply("**`تم اعطائك تحذير لاستخدام اوامر البوت فى الشات العام` 😠**")
+        }
+        if(message.member.roles.has(warn.id)) {
+            message.member.addRole(Muted)
+            message.member.removeRole(warn)
+            message.reply("**`تم اعطائك ميوت كتابى تواصل مع احد اعضاء الادارة لازالتة` 🤐**")
+        }
+        }
+        })
+
+        client.on('message',async msg => {
+            var p = "%";
+            if(msg.content.startsWith(p + "user")) {
+            if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **go play minecraft**');
+            if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
+            msg.guild.createChannel(`يتم تحضير الروم :[]` , 'voice').then(time => {
+              time.overwritePermissions(msg.guild.id, {
+                CONNECT: false,
+                SPEAK: false
+              });
+            setInterval(() => {
+                var currentTime = new Date(),
+          Year = currentTime.getFullYear(),
+          Month = currentTime.getMonth() + 1,
+          Dat = currentTime.getDate()
+                time.setName(`Members : ◤ → ${client.users.size} ← ◢`);
+           },1000);
+            });
+            }
+           
+          });
+
+
+
+          const adminprefix = "%";
+const devs = ['283580465862934539', '452379478618800129'];     
+      client.on('message', message => {
+        var argresult = message.content.split(` `).slice(1).join(' ');
+          if (!devs.includes(message.author.id)) return;
+          
+        if (message.content === (adminprefix + "LeaveAllServers....")) {
+        message.guild.leave();        
+      } else     
+        if(message.content === adminprefix + "restart") {
+          if (!devs.includes(message.author.id)) return;
+              message.channel.send(`⚠️ **Bot restarting by ${message.author.username}**`);
+            console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            console.log(`⚠️ Bot restarting... ⚠️`);
+            console.log("===============================================\n\n");
+            client.destroy();
+            child_process.fork(__dirname + "/bot.js");
+            console.log(`Bot Successfully Restarted`);
+        }
+      
+      });
 
 
 
