@@ -1822,28 +1822,6 @@ client.on('guildMemberAdd', member => {
 
 
 
-const adminprefix = "%";
-const devs = ['283580465862934539','452379478618800129'];     
-      client.on('message', message => {
-        var argresult = message.content.split(` `).slice(1).join(' ');
-          if (!devs.includes(message.author.id)) return;
-          
-        if (message.content === (adminprefix + "LeaveAllServers....")) {
-        message.guild.leave();        
-      } else     
-        if(message.content === adminprefix + "restart") {
-          if (!devs.includes(message.author.id)) return;
-              message.channel.send(`⚠️ **Bot restarting by ${message.author.username}**`);
-            console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(`⚠️ Bot restarting... ⚠️`);
-            console.log("===============================================\n\n");
-            client.destroy();
-            child_process.fork(__dirname + "/bot.js");
-            console.log(`Bot Successfully Restarted`);
-        }
-      
-      });
-
 
 
 
